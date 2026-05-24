@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee" version="6.0">
+    
+    <display-name>ATI Badulla Portal</display-name>
+    
+    <!-- Default page -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- File Upload limit -->
+    <servlet>
+        <servlet-name>UploadImageServlet</servlet-name>
+        <servlet-class>com.ati.badulla.UploadImageServlet</servlet-class>
+        <multipart-config>
+            <max-file-size>16177215</max-file-size>
+            <max-request-size>16177215</max-request-size>
+            <file-size-threshold>0</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    
+</web-app>
